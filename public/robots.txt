@@ -1,0 +1,30 @@
+# Allow all search engines to crawl everything except sensitive parts
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /profile/
+Disallow: /employee-details/
+Disallow: /private/
+Disallow: /settings/
+Disallow: /logout/
+
+# Block crawling of certain dynamic URLs (e.g., with session or tracking parameters)
+Disallow: /*?session=
+Disallow: /*?utm_source=
+
+# Allow crawlers to access the sitemap for better site indexing
+Sitemap: https://emp-management.com/sitemap.xml
+
+# Disallow crawling of specific files (e.g., images, scripts)
+Disallow: /images/
+Disallow: /scripts/
+
+# Prevent crawlers from accessing admin or backend resources
+User-agent: *
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /config/
+
+# Allow crawling of everything else
+User-agent: *
+Disallow:
